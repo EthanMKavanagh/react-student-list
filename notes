@@ -1,7 +1,7 @@
 Notes:
 
-[ ] - axios POST route `/students` [jim]
-    [ ] - inside the Component, but outside the render()
+[ x] - axios POST route `/students` [jim]
+    [ x] - inside the Component, but outside the render()
 
 [x] - new Component `StudentList.js`
     [x] - import react
