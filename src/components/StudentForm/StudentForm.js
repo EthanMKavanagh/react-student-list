@@ -9,6 +9,9 @@ class Student {
 
 class StudentForm extends Component {
     state = new Student();
+    //state = {
+    // github:''
+    //}
 
     // Called when the input field changes
     handleChange = (event) => {

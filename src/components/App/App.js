@@ -9,40 +9,57 @@ class App extends Component {
     studentList: [],
   };
 
+  componentDidMount() {
+    this.getStudents();
+  }
+
+  getStudents = () => {
+    axios({
+      method: 'GET',
+      url: '/students'
+    }).then(response => {
+      console.log('in /students GET', response.data);
+      this.setState({
+        studentList: response.data
+      })
+    }).catch(error => {
+      console.log('we have an error', error);
+    });
+  }
+
+  handleDetails(student) {
+    console.log(student);
+    axios({
+      method: 'GET',
+      url: 'https://api.github.com/users/' + student,
+      params: {
+        access_token: '913f20e25e454b699cbf7b4d5f3ae7fd516cafc4'
+      }
+    }).then(response => {
+      console.log('response from github', response);
+    }).catch(error => {
+      console.log(error);
+    })
+  }
+  
   // This function is called by the StudentForm when the submit button is pressed
   addStudent = (newStudent) => {
     console.log(newStudent);
-    axios ({
+    // POST your data here
+    axios({
       method: 'POST',
       url: '/students',
       data: newStudent
-    }).then(response =>{
-      console.log('POST new student', response);
-      console.log('data', response.data);
-    // do we need getStudent() to fresh screen??
-    }).catch(err => {
-      console.log(err);
-    });
-
-
+    })
+    .then((response) => {
+      this.getStudents();
+    }).catch((err) => {
+      alert(err)
+    })
   }
 
-  // componentDidMount(){
-  //   axios ({
-  //     method: 'POST',
-  //     url: '/students',
-  //     data: this.state.newStudent
-  //   }).then(response =>{
-  //     console.log('POST new student', response);
-  //     console.log('data', response.data);
-  //   // do we need getStudent() to fresh screen??
-  //   }).catch(err => {
-  //     console.log(err);
-  //   });
-
-  //   }
-
   render() {
+    console.log('this is the prop', this.state.studentList);
     return (
       <div className="App">
         <header className="App-header">
@@ -51,9 +68,8 @@ class App extends Component {
         <br/>
         <StudentForm addStudent={this.addStudent}/>
 
-        <StudentList studentList={this.studentList}/>
-
-
+        <p>Student list goes here.</p>
+        <StudentList studentList={this.state.studentList} handleDetails={this.handleDetails}/>
       </div>
     );
   }
