@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
 
 class StudentList extends Component {
+
+    state = {
+        studentList: []
+    }
+
     render() {
         return (
             <div>
-                <p>Hello Users</p>
+                <table>
+                    <th>
+                        <th>Username</th>
+                    </th>
+                    <td>
+                        <tr>{this.state.username}</tr>
+                    </td>
+                </table>
             </div>
         );
     }
