@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class StudentList extends Component {
 
     state = {
-        
+        studentList: []
     }
 
     render() {
