@@ -3,10 +3,10 @@ Notes:
 [ ] - axios POST route `/students`
     [ ] - inside the Component, but outside the render()
 
-[ ] - new Component `StudentList.js`
-    [ ] - import react
-    [ ] - export the file
-    [ ] - import to App.js
+[x] - new Component `StudentList.js`
+    [x] - import react
+    [x] - export the file
+    [x] - import to App.js
 
 [ ] - Display students in a table on DOM
     [ ] - inside StudentList.js

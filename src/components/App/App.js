@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import StudentForm from '../StudentForm/StudentForm';
+import StudentList from '../StudentList/StudentList';
 
 class App extends Component {
   state = {
@@ -23,7 +24,7 @@ class App extends Component {
         <br/>
         <StudentForm addStudent={this.addStudent}/>
 
-        <p>Student list goes here.</p>
+        <StudentList />
       </div>
     );
   }
