@@ -17,9 +17,9 @@ class App extends Component {
 
   componentDidMount(){
     axios ({
-      method: 'POSTGET',
+      method: 'POST',
       url: '/students',
-      data: newStudent
+      data: 
     }).then(response =>{
       console.log('POST new student', response);
       console.log('data', response.data);
@@ -40,9 +40,11 @@ class App extends Component {
         <StudentForm addStudent={this.addStudent}/>
 
         <StudentList studentList={this.studentList}/>
+
+
       </div>
     );
   }
-// }
+}
 
 export default App;

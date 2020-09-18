@@ -13,9 +13,14 @@ class StudentList extends Component {
                     <th>
                         <th>Username</th>
                     </th>
-                    <td>
-                        <tr>{this.state.username}</tr>
-                    </td>
+                    <tbody>
+                    {this.studentList.map(student=> (
+                        <tr key={student}>
+                            student
+                        </tr>
+                        ))}
+                    </tbody>
+                    
                 </table>
             </div>
         );
