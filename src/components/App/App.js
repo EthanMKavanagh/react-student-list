@@ -12,13 +12,10 @@ class App extends Component {
   // This function is called by the StudentForm when the submit button is pressed
   addStudent = (newStudent) => {
     console.log(newStudent);
-
-
-  componentDidMount(){
     axios ({
       method: 'POST',
       url: '/students',
-      data: 
+      data: newStudent
     }).then(response =>{
       console.log('POST new student', response);
       console.log('data', response.data);
@@ -27,7 +24,23 @@ class App extends Component {
       console.log(err);
     });
 
-    }
+
+  }
+
+  // componentDidMount(){
+  //   axios ({
+  //     method: 'POST',
+  //     url: '/students',
+  //     data: this.state.newStudent
+  //   }).then(response =>{
+  //     console.log('POST new student', response);
+  //     console.log('data', response.data);
+  //   // do we need getStudent() to fresh screen??
+  //   }).catch(err => {
+  //     console.log(err);
+  //   });
+
+  //   }
 
   render() {
     return (
@@ -44,6 +57,6 @@ class App extends Component {
       </div>
     );
   }
-
+}
 
 export default App;
