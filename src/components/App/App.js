@@ -14,6 +14,23 @@ class App extends Component {
     // POST your data here
   }
 
+  componentDidMount(){
+    axios ({
+    method: 'POSTGET',
+    url: '/students',
+    data: newStudent
+    }).then(response =>{
+    console.log('POST new student', response);
+    console.log('data', response.data);
+    // do we need getStudent() to fresh screen??
+    //this.setState({
+    // studentList: response.data
+    }).catch(err => {
+    console.log(err);
+    });
+    }
+    }
+
   render() {
     return (
       <div className="App">
