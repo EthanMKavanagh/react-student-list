@@ -30,7 +30,6 @@ class App extends Component {
     console.log(err);
     });
     }
-    }
 
   render() {
     return (
@@ -41,7 +40,7 @@ class App extends Component {
         <br/>
         <StudentForm addStudent={this.addStudent}/>
 
-        <StudentList />
+        <StudentList studentList={this.studentList}/>
       </div>
     );
   }
