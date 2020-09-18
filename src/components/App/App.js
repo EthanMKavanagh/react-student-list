@@ -12,8 +12,7 @@ class App extends Component {
   // This function is called by the StudentForm when the submit button is pressed
   addStudent = (newStudent) => {
     console.log(newStudent);
-    // POST your data here
-  }
+
 
   componentDidMount(){
     axios ({
@@ -27,8 +26,8 @@ class App extends Component {
     }).catch(err => {
       console.log(err);
     });
-    }
 
+    }
 
   render() {
     return (
