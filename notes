@@ -1,0 +1,21 @@
+Notes:
+
+[ ] - axios POST route `/students`
+    [ ] - inside the Component, but outside the render()
+
+[x] - new Component `StudentList.js`
+    [x] - import react
+    [x] - export the file
+    [x] - import to App.js
+
+[ ] - Display students in a table on DOM
+    [ ] - inside StudentList.js
+    [ ] - connect to the input field and submit button
+
+[ ] - Update list as new users are added
+    [ ] - add new user to array
+
+
+DO NOT TOUCH THESE FILES:
+- Server side code
+- StudentForm Component
