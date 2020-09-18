@@ -13,19 +13,20 @@ class App extends Component {
   addStudent = (newStudent) => {
     console.log(newStudent);
 
-    componentDidMount(){
-      axios ({
-        method: 'POST',
-        url: '/students',
-        data: newStudent
-      }).then(response =>{
-        console.log('POST new student', response);
-        console.log('data', response.data);
-      // do we need getStudent() to fresh screen??
-      }).catch(err => {
-        console.log(err);
-      });
-      }
+
+  componentDidMount(){
+    axios ({
+      method: 'POST',
+      url: '/students',
+      data: 
+    }).then(response =>{
+      console.log('POST new student', response);
+      console.log('data', response.data);
+    // do we need getStudent() to fresh screen??
+    }).catch(err => {
+      console.log(err);
+    });
+
     }
 
   render() {
@@ -38,9 +39,11 @@ class App extends Component {
         <StudentForm addStudent={this.addStudent}/>
 
         <StudentList studentList={this.studentList}/>
+
+
       </div>
     );
   }
-} 
+
 
 export default App;
