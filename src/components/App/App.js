@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    axios ({
+        axios ({
       method: 'POSTGET',
       url: '/students',
       data: newStudent
@@ -25,12 +25,14 @@ class App extends Component {
       console.log('data', response.data);
     // do we need getStudent() to fresh screen??
     //this.setState({
-    // studentList: response.data
+    //  studentList: response.data
     }).catch(err => {
-        console.log(err);
-      });
-      }
+      console.log(err);
+    });
     }
+
+  }
+
 
   render() {
     return (

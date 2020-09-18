@@ -1,6 +1,6 @@
 Notes:
 
-[ ] - axios POST route `/students`
+[ ] - axios POST route `/students` [jim]
     [ ] - inside the Component, but outside the render()
 
 [x] - new Component `StudentList.js`
@@ -8,11 +8,11 @@ Notes:
     [x] - export the file
     [x] - import to App.js
 
-[ ] - Display students in a table on DOM
+[ ] - Display students in a table on DOM 
     [ ] - inside StudentList.js
     [ ] - connect to the input field and submit button
 
-[ ] - Update list as new users are added
+[ ] - Update list as new users are added [jim]
     [ ] - add new user to array
 
 
