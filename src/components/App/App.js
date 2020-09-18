@@ -19,7 +19,7 @@ class App extends Component {
     axios ({
       method: 'POST',
       url: '/students',
-      data: 
+      data: this.state.newStudent
     }).then(response =>{
       console.log('POST new student', response);
       console.log('data', response.data);
@@ -45,6 +45,6 @@ class App extends Component {
       </div>
     );
   }
-
+}
 
 export default App;
