@@ -4,7 +4,7 @@ class StudentList extends Component {
     render() {
         return (
             <div>
-                <p>Hello</p>
+                <p>Hello Users</p>
             </div>
         );
     }
